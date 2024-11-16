@@ -47,6 +47,12 @@ app.get('/sum', (req, res) => {
   res.send(getSum(req).toString());
 });
 
+app.get('/checkName' , (req,res) => {
+  let name = req.query.name;
+
+  res.send(name);
+});
+
 function getSubStatus(username, subscribed) {
   if (subscribed === 'true') {
     return username + ' is subscribed';
